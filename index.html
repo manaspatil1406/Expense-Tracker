@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- User login -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter Username" required />
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required />
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+
+    <div id="app-container" class="container hidden">
+        <h2>Expense Tracker</h2>
+        <h4>Welcome, <span id="user-display"></span></h4>
+        <div class="summary">
+            <h4>Your Balance</h4>
+            <h1 id="balance">$0.00</h1>
+            <div class="inc-exp-container">
+                <div>
+                    <h4>Income</h4>
+                    <p id="money-plus" class="money-plus">+$0.00</p>
+                </div>
+                <div>
+                    <h4>Expense</h4>
+                    <p id="money-minus" class="money-minus">-$0.00</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>History</h3>
+        <ul id="list" class="list"></ul>
+
+        <h3>Add New Transaction</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="text">Text</label>
+                <input type="text" id="text" placeholder="Enter Transaction..." />
+            </div>
+            <div class="form-control">
+                <label for="amount">Amount <br /> (negative - expense, positive - income)</label>
+                <input type="number" id="amount" placeholder="Enter amount..." />
+            </div>
+            <div class="form-control">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Salary">Salary</option>
+                </select>
+            </div>
+            <button class="btn">Add Transaction</button>
+        </form>
+    </div>
+
+    <!-- JavaScript Project -->
+    <script src="script.js"></script>
+</body>
+</html>
+
